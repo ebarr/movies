@@ -1,5 +1,8 @@
 Movies::Application.routes.draw do
 
+  resources :comments, path: '/movies/comments/:id'
+
+#------------------------------
   # Routes for the Movie resource:
   # CREATE
   get '/movies/new', controller: 'movies', action: 'new', :as => 'new_movie'
